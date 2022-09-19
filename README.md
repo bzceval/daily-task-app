@@ -17,4 +17,4 @@
 [ ] Inject the same things on the keyboard with the enter key to insert and the spacebar to delete. </br> 
 
 ## Design
-- [Figma Design]()
+- [Figma Design](https://www.figma.com/file/Po79NBfsNv6HeDX5ov9KON/Todo-App-%7C-JS?node-id=0%3A1)
