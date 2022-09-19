@@ -9,9 +9,9 @@
 
 ## Step by Step Coding
 [x] Get Document Elements With JS </br> 
-[ ] Check if input value is entered. </br> 
-[ ] Add AddButon and a listen event to it. </br> 
-[ ] Create your todo list when event click. If input value is entered, get the value and add it with innerHTML else send a modal. </br> 
+[x] Add AddButon and a listen event to it. </br> 
+[x] Check if input value is entered with console log. </br> 
+[ ] Create your todo list when event click. If input value is entered, create must new dom selector and get the value and add it with innerHTML with this selector else send a modal.</br> 
 [ ] Add DeleteButton and a listen event to it. </br> 
 [ ] Delete last added item when event click </br> 
 [ ] Inject the same things on the keyboard with the enter key to insert and the spacebar to delete. </br> 
