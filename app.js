@@ -3,29 +3,53 @@ const itemInputEl = document.querySelector('#todo-item-input')
 const descriptionInputEl = document.querySelector("#todo-description-input")
 const addTaskSectionEl = document.querySelector(".add-task-section")
 
-//Create selectors of Dom
-const newUlDom = document.createElement("div")
-addTaskSectionEl.append(newUlDom)
-newUlDom.setAttribute("id", "input-item-value")
-const newPDom = document.createElement("p")
-newUlDom.append(newPDom)
-// const newiDom = document.createElement("i")
-// newiDom.setAttribute("class", "fa-regular", "fa-pen-to-square")
-
 //Button Selectors
 const addTaskBtnEl = document.querySelector(".add-task-btn")
 
 
 addTaskBtnEl.addEventListener("click", () => {
-    if(!itemInputEl.value ) {
-        console.log("item yok")
-    }
-    else if (!descriptionInputEl.value) {
-        console.log("desc yok")
-    }
-    else {
-       newPDom.innerHTML += `<i class="fa-regular fa-pen-to-square"></i> ${itemInputEl.value} <i class="fa-solid fa-trash"></i>`
-       newPDom.innerHTML += `<i class="fa-regular fa-pen-to-square"></i> ${descriptionInputEl.value} <i class="fa-solid fa-trash"></i>`
-       newPDom.innerHTML += `<hr>`
+    if(!itemInputEl.value) {
+        console.log("item input yok")
+    } else if (!descriptionInputEl.value) {
+        console.log("description input yok")
+    } else {
+        const newTask = {
+            id: new Date().getTime(),
+            task: itemInputEl.value,
+            description: descriptionInputEl.value,
+            completed: false,
+        }
+        createItemElement(newTask)
+        createDescriptionElement(newTask)
+        //Dom ve local için ayrı ayrı push eklenecek
+        itemInputEl.value = ""
+        descriptionInputEl = ""
     }
 })
+function createItemElement(newTask) {
+    const {id, task, completed} = newTask;
+    const taskLi = document.createElement("li")
+    taskLi.setAttribute("id", "taskItem")
+    //newTodo control eklenecek
+
+    const correctIcon = document.createElement("i")
+    correctIcon.setAttribute("class","fa-circle-check")
+    taskLi.appendChild(correctIcon)
+
+    const editIcon = document.createElement("i")
+    editIcon.setAttribute("class", "fa-pen-to-square")
+    taskLi.appendChild(editIcon)
+
+    const taskItemText = document.createElement("p")
+    const taskItemTextNode = document.createTextNode(task)
+    taskItemText.appendChild(taskItemTextNode)
+    taskLi.appendChild(taskItemText)
+
+    const deleteIcon = document.createElement("i")
+    deleteIcon.setAttribute("class", "fa-trash")
+    taskLi.appendChild(deleteIcon)
+
+    console.log(taskLi)
+
+    addTaskSectionEl.appendChild(taskLi)
+}
