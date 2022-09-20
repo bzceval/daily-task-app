@@ -7,8 +7,10 @@ const addTaskSectionEl = document.querySelector(".add-task-section")
 const newUlDom = document.createElement("div")
 addTaskSectionEl.append(newUlDom)
 newUlDom.setAttribute("id", "input-item-value")
-
-
+const newPDom = document.createElement("p")
+newUlDom.append(newPDom)
+// const newiDom = document.createElement("i")
+// newiDom.setAttribute("class", "fa-regular", "fa-pen-to-square")
 
 //Button Selectors
 const addTaskBtnEl = document.querySelector(".add-task-btn")
@@ -22,8 +24,8 @@ addTaskBtnEl.addEventListener("click", () => {
         console.log("desc yok")
     }
     else {
-       newUlDom.innerHTML += `<p><i class="fa-regular fa-pen-to-square"></i> ${itemInputEl.value} <i class="fa-solid fa-trash"></i></p>`
-       newUlDom.innerHTML += `<p><i class="fa-regular fa-pen-to-square"></i> ${descriptionInputEl.value} <i class="fa-solid fa-trash"></i> </p>`
-       newUlDom.innerHTML += `<hr>`
+       newPDom.innerHTML += `<i class="fa-regular fa-pen-to-square"></i> ${itemInputEl.value} <i class="fa-solid fa-trash"></i>`
+       newPDom.innerHTML += `<i class="fa-regular fa-pen-to-square"></i> ${descriptionInputEl.value} <i class="fa-solid fa-trash"></i>`
+       newPDom.innerHTML += `<hr>`
     }
 })
