@@ -13,8 +13,8 @@
 [x] Get Document Elements With JS </br> 
 [x] Add AddButon and a listen event to it. </br> 
 [x] Check if input value is entered with console log. </br> 
-[x] Create your todo list when event click. 
-[x] Send mod if no input value and descripton value. 
+[x] Create your todo list when event click. </br>
+[x] Send mod if no input value and descripton value. </br>
 [ ] Else create a new dataset. Call the function that creates the new li element for task input data. Call the function that creates the new li element for description input data. it should push the data from the li function with the parameter to the parsed array for localStorage, set data for DOM. And empty the input.</br> 
 [x] Create a function to create the li element for item input.</br>
 [ ] Create a new li element and assign it the object's id and the completed class.</br>
@@ -22,6 +22,7 @@
 [x] Create edit icon and connect to li</br>
 [x] Create a p element for the description and task, connect it to the li element by creating a text node.</br>
 [x] Create delete icon and connect to li</br>
+[ ] The same steps are done in the annotation function.</br>
 [ ] Assign the resulting li element to the ul element as a child </br>
 [ ] If an event comes from any of the children of the ul, detect it and take action with addEventListener. (Capturing)</br>
 [ ] If the event came from a delete button, delete the parent of the delete button from the DOM.</br>
