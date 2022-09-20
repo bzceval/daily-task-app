@@ -18,22 +18,38 @@ I used **HTML** in my index page and applied the **JavaScript** language to give
     SET innerHTML += input.value </br>    
 
 ## Step by Step Coding
-[ ] update todos array with data from localStorage </br>
-[ ] If there is no item named todos in localStrge, assign an empty array. </br>
 [x] Get Document Elements With JS </br> 
 [x] Add AddButon and a listen event to it. </br> 
-[x] Check if input value is entered with console log. </br> 
-[x] Create your todo list when event click. </br>
-[x] Send mod if no input value and descripton value. </br>
-[ ] Else create a new dataset. Call the function that creates the new li element for task input data. Call the function that creates the new li element for description input data. it should push the data from the li function with the parameter to the parsed array for localStorage, set data for DOM. And empty the input.</br> 
-[x] Create a function to create the li element for item input.</br>
-[ ] Create a new li element and assign it the object's id and the completed class.</br>
+[x] Check if task item input value is entered with console log but you shouldn't take a space as a task.</br> 
+[x] Check if task description input value is entered with console log but you shouldn't take a space as a task.</br> 
+[x] Else create a new dataset. 
+[x] Call the function that creates the new li element for task input item data. 
+[x] Call the function that creates the new li element for description input data. 
+[x] And empty the of both input.</br>
+[x] Empty the input if no task item input value and task descripton input value. </br>
+*Finish this function for now. Because I will add localStorage after finishing Dom activities.*</br>
+[x] Created a function that takes a dynamic data parameter that the li element element for task input item will be in.
+[x] Create a new li element and assign it the object's id and the completed class.</br>
 [x] Create control icon and connect to li</br>
 [x] Create edit icon and connect to li</br>
 [x] Create a p element for the description and task, connect it to the li element by creating a text node.</br>
 [x] Create delete icon and connect to li</br>
 [x] The same steps are done in the annotation function.</br>
-[ ] Assign the resulting li element to the ul element as a child </br>
+[x] Assign the resulting li elements to the ul element as a child. </br>
+
+
+
+
+
+[x] Create your todo list when event click. </br>
+
+
+ 
+
+
+
+
+
 [ ] If an event comes from any of the children of the ul, detect it and take action with addEventListener. (Capturing)</br>
 [ ] If the event came from a delete button, delete the parent of the delete button from the DOM.</br>
 [ ] Delete related element of array</br>
@@ -44,5 +60,13 @@ I used **HTML** in my index page and applied the **JavaScript** language to give
 [ ] Add DeleteButton and a listen event to it. </br> 
 [ ] Delete last added item when event click </br> 
 [ ] Inject the same things on the keyboard with the enter key to insert and the spacebar to delete. </br> 
+[ ]
+[ ]
+[ ]
+[ ]
+[ ]
+[ ]
+[ ]it should push the data from the li function with the parameter to the parsed array for localStorage, set data for DOM.
 
-
+[ ] update todos array with data from localStorage </br>
+[ ] If there is no item named todos in localStroge, assign an empty array. </br>

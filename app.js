@@ -8,9 +8,9 @@ const addTaskBtnEl = document.querySelector(".add-task-btn")
 
 
 addTaskBtnEl.addEventListener("click", () => {
-    if(!itemInputEl.value) {
+    if(itemInputEl.value.trim() === "") {
         console.log("item input yok")
-    } else if (!descriptionInputEl.value) {
+    } else if (descriptionInputEl.value.trim() === "") {
         console.log("description input yok")
     } else {
         const newTask = {
@@ -27,11 +27,13 @@ addTaskBtnEl.addEventListener("click", () => {
     }
 })
 function createItemElement(newTask) {
-    const {id, task, completed} = newTask;
+    const {id, task, completed} = newTask; //destructing
     
     const taskLi = document.createElement("li")
-    taskLi.setAttribute("id", "taskItem")
-    //newTodo control eklenecek
+    taskLi.setAttribute("id", id)
+    
+    // newTask.completed ? li.classList.add("complated") : ""
+    completed && li.classList.add("complated")
 
     const correctIcon = document.createElement("i")
     correctIcon.setAttribute("class","fa-circle-check")
@@ -56,11 +58,11 @@ function createItemElement(newTask) {
 }
 
 function createDescriptionElement(newTask) {
-    const {description} = newTask
+    const {description, id} = newTask
 
     const descriptionLi = document.createElement("li")
-    descriptionLi.setAttribute("id", "descriptionItem")
-    
+    descriptionLi.setAttribute("id", id)
+    descriptionLi.style.borderBottom = "solid"
 
     const editIcon = document.createElement("i")
     editIcon.setAttribute("class","fa-circle-check")
@@ -79,3 +81,4 @@ function createDescriptionElement(newTask) {
 
     addTaskUl.appendChild(descriptionLi)
 }
+
