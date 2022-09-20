@@ -8,8 +8,8 @@
     SET innerHTML += input.value </br>    
 
 ## Step by Step Coding
-[ ] update todos array with data from localStorage
-[ ] If there is no item named todos in localStrge, assign an empty array.
+[ ] update todos array with data from localStorage </br>
+[ ] If there is no item named todos in localStrge, assign an empty array. </br>
 [x] Get Document Elements With JS </br> 
 [x] Add AddButon and a listen event to it. </br> 
 [x] Check if input value is entered with console log. </br> 
