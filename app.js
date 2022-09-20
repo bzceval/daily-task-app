@@ -27,35 +27,36 @@ addTaskBtnEl.addEventListener("click", () => {
     }
 })
 
+const taskDiv = document.createElement("div") 
+
 function createItemElement(newTask) {
     const {id, task, completed} = newTask; //destructing
-    
-    const taskLi = document.createElement("li")
-    taskLi.setAttribute("id", id)
+
+    taskDiv.setAttribute("id", id)
     
     // newTask.completed ? li.classList.add("complated") : ""
     completed && li.classList.add("complated")
 
     const correctIcon = document.createElement("i")
     correctIcon.setAttribute("class","fa-circle-check")
-    taskLi.appendChild(correctIcon)
+    taskDiv.appendChild(correctIcon)
 
     const editIcon = document.createElement("i")
     editIcon.setAttribute("class", "fa-pen-to-square")
-    taskLi.appendChild(editIcon)
+    taskDiv.appendChild(editIcon)
 
     const taskItemText = document.createElement("p")
     const taskItemTextNode = document.createTextNode(task)
     taskItemText.appendChild(taskItemTextNode)
-    taskLi.appendChild(taskItemText)
+    taskDiv.appendChild(taskItemText)
 
     const deleteIcon = document.createElement("i")
     deleteIcon.setAttribute("class", "fa-trash")
-    taskLi.appendChild(deleteIcon)
+    taskDiv.appendChild(deleteIcon)
 
-    console.log(taskLi)
+    console.log(taskDiv)
 
-    addTaskUl.appendChild(taskLi)
+    addTaskUl.appendChild(taskDiv)
 }
 
 function createDescriptionElement(newTask) {
@@ -80,7 +81,7 @@ function createDescriptionElement(newTask) {
 
     console.log(descriptionLi)
 
-    addTaskUl.appendChild(descriptionLi)
+    taskDiv.appendChild(descriptionLi)
 }
 
 addTaskUl.addEventListener("click", (e)=> {
