@@ -36,6 +36,10 @@ I used **HTML** in my index page and applied the **JavaScript** language to give
 [x] Create delete icon and connect to li</br>
 [x] The same steps are done in the annotation function.</br>
 [x] Assign the resulting li elements to the ul element as a child. </br>
+[x] If an event comes from any of the children of the ul, detect it and take action with addEventListener. (Capturing)</br>
+[ ] If the event came from a delete button, delete the parent of the delete button from the DOM.</br>
+
+
 
 
 
@@ -50,8 +54,8 @@ I used **HTML** in my index page and applied the **JavaScript** language to give
 
 
 
-[ ] If an event comes from any of the children of the ul, detect it and take action with addEventListener. (Capturing)</br>
-[ ] If the event came from a delete button, delete the parent of the delete button from the DOM.</br>
+
+
 [ ] Delete related element of array</br>
 [ ] Store the final version of the set array in localStorage</br>
 [ ] If the event came from an okey button, if it has a class named checked in the relevant li element, delete it, otherwise add it (DOM)</br>

@@ -23,9 +23,10 @@ addTaskBtnEl.addEventListener("click", () => {
         createDescriptionElement(newTask)
         //Dom ve local için ayrı ayrı push eklenecek
         itemInputEl.value = ""
-        descriptionInputEl = ""
+        descriptionInputEl.value = ""
     }
 })
+
 function createItemElement(newTask) {
     const {id, task, completed} = newTask; //destructing
     
@@ -82,3 +83,10 @@ function createDescriptionElement(newTask) {
     addTaskUl.appendChild(descriptionLi)
 }
 
+addTaskUl.addEventListener("click", (e)=> {
+    console.log(e.target)
+
+    if(e.target.classList.contains("fa-trash")) {
+        e.target.parentElement.remove()
+    }
+})
