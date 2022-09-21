@@ -4,8 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'Baloo 2', cursive;
-    font-size: 1rem; 
+    font-family: 'Baloo 2', cursive;  
 } 
 .add-section { 
     background-image: url(./images/background.jpg);
@@ -21,7 +20,7 @@ body {
 }
 .daily-task {
     width: 50%;
-    background-color: rgba(0, 0, 0, 75%);
+    background-color: rgba(0, 0, 0, 75%); 
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -31,32 +30,35 @@ body {
 }
 .daily-task input {
     background-color: transparent;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.7);
     border: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
+    box-shadow: rgba(99, 99, 99, 0.4) 1px 1px 3px 0px;
     outline: none;
     width: 80%;
-    margin: 10px 0;
+    margin: 20px 0;
     padding: 10px 0;  
+    font-size: 1rem;
 }
 .daily-task input:focus {
-    box-shadow: rgba(99, 99, 99, 0.4) 0px 2px 8px 0px;
+    box-shadow: rgba(99, 99, 99, 0.4) 1px 3px 8px 2px;
     transition: all 0.5s;
 }
 .add-task-btn {
     background-color: #1D4F4C;
     border: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.7);
     padding: 10px;
     width: 80%;
     margin-top: 20px;
     border-radius: 5px;
     margin-bottom: 3rem;
+    font-size: 1rem;
 }
 .add-task-btn:hover {
     transition: all 0.5s;
-    box-shadow: rgba(99, 99, 99, 0.4) 0px 2px 8px 0px;
-    background-color: #1d4f4cc7;
+    box-shadow: rgba(99, 99, 99, 0.4) 1px 2px 4px 2px;
+    background-color: #1d4f4cc8;
 }
 .date-todo {
     text-align: end;

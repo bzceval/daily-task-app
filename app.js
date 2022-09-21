@@ -27,36 +27,37 @@ addTaskBtnEl.addEventListener("click", () => {
     }
 })
 
-const taskDiv = document.createElement("div") 
+
 
 function createItemElement(newTask) {
     const {id, task, completed} = newTask; //destructing
 
-    taskDiv.setAttribute("id", id)
+    const taskLi = document.createElement("li") 
+    taskLi.setAttribute("id", id) 
     
     // newTask.completed ? li.classList.add("complated") : ""
-    completed && li.classList.add("complated")
+    // completed && li.classList.add("complated")
 
-    const correctIcon = document.createElement("i")
-    correctIcon.setAttribute("class","fa-circle-check")
-    taskDiv.appendChild(correctIcon)
+    // const correctIcon = document.createElement("i")
+    // correctIcon.setAttribute("class","fa-circle-check")
+    // taskLi.appendChild(correctIcon)
 
     const editIcon = document.createElement("i")
-    editIcon.setAttribute("class", "fa-pen-to-square")
-    taskDiv.appendChild(editIcon)
+    editIcon.setAttribute("class", "bi-pencil", "bi")
+    taskLi.appendChild(editIcon)
 
     const taskItemText = document.createElement("p")
     const taskItemTextNode = document.createTextNode(task)
     taskItemText.appendChild(taskItemTextNode)
-    taskDiv.appendChild(taskItemText)
+    taskLi.appendChild(taskItemText)
 
     const deleteIcon = document.createElement("i")
-    deleteIcon.setAttribute("class", "fa-trash")
-    taskDiv.appendChild(deleteIcon)
+    deleteIcon.setAttribute("class", "bi-trash3", "bi")
+    taskLi.appendChild(deleteIcon)
 
-    console.log(taskDiv)
+    console.log(taskLi)
 
-    addTaskUl.appendChild(taskDiv)
+    addTaskUl.appendChild(taskLi)
 }
 
 function createDescriptionElement(newTask) {
@@ -67,7 +68,7 @@ function createDescriptionElement(newTask) {
     descriptionLi.style.borderBottom = "solid"
 
     const editIcon = document.createElement("i")
-    editIcon.setAttribute("class","fa-circle-check")
+    editIcon.setAttribute("class", "bi-pencil", "bi")
     descriptionLi.appendChild(editIcon)
 
     const descriptionItemText = document.createElement("p")
@@ -75,19 +76,15 @@ function createDescriptionElement(newTask) {
     descriptionItemText.appendChild(descriptionItemTextNode)
     descriptionLi.appendChild(descriptionItemText)
 
-    const deleteIcon = document.createElement("i")
-    deleteIcon.setAttribute("class", "fa-trash")
-    descriptionLi.appendChild(deleteIcon)
-
     console.log(descriptionLi)
 
-    taskDiv.appendChild(descriptionLi)
+    addTaskUl.appendChild(descriptionLi)
 }
 
 addTaskUl.addEventListener("click", (e)=> {
     console.log(e.target)
 
-    if(e.target.classList.contains("fa-trash")) {
+    if(e.target.classList.contains("bi-trash3")) {
         e.target.parentElement.remove()
     }
 })
