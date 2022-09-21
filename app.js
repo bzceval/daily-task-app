@@ -20,7 +20,7 @@ addTaskBtnEl.addEventListener("click", () => {
             completed: false,
         }
         createItemElement(newTask)
-        createDescriptionElement(newTask)
+        // createDescriptionElement(newTask)
         //Dom ve local için ayrı ayrı push eklenecek
         itemInputEl.value = ""
         descriptionInputEl.value = ""
@@ -30,61 +30,48 @@ addTaskBtnEl.addEventListener("click", () => {
 
 
 function createItemElement(newTask) {
-    const {id, task, completed} = newTask; //destructing
+    const {id, task, completed, description} = newTask; //destructing
 
     const taskLi = document.createElement("li") 
     taskLi.setAttribute("id", id) 
+    taskLi.setAttribute("class", "taskItem")
+
+    const leftDiv = document.createElement("div")
+    leftDiv.setAttribute("class", "left-div")
+
+    const rightDiv = document.createElement("div")
+    rightDiv.setAttribute("class", "right-div")
     
-    // newTask.completed ? li.classList.add("complated") : ""
-    // completed && li.classList.add("complated")
-
-    // const correctIcon = document.createElement("i")
-    // correctIcon.setAttribute("class","fa-circle-check")
-    // taskLi.appendChild(correctIcon)
-
-    const editIcon = document.createElement("i")
-    editIcon.setAttribute("class", "bi-pencil", "bi")
-    taskLi.appendChild(editIcon)
+    taskLi.appendChild(leftDiv)
+    taskLi.appendChild(rightDiv)
 
     const taskItemText = document.createElement("p")
     const taskItemTextNode = document.createTextNode(task)
     taskItemText.appendChild(taskItemTextNode)
-    taskLi.appendChild(taskItemText)
-
-    const deleteIcon = document.createElement("i")
-    deleteIcon.setAttribute("class", "bi-trash3", "bi")
-    taskLi.appendChild(deleteIcon)
-
-    console.log(taskLi)
-
-    addTaskUl.appendChild(taskLi)
-}
-
-function createDescriptionElement(newTask) {
-    const {description, id} = newTask
-
-    const descriptionLi = document.createElement("li")
-    descriptionLi.setAttribute("id", id)
-    descriptionLi.style.borderBottom = "solid"
-
-    const editIcon = document.createElement("i")
-    editIcon.setAttribute("class", "bi-pencil", "bi")
-    descriptionLi.appendChild(editIcon)
+    leftDiv.appendChild(taskItemText)
 
     const descriptionItemText = document.createElement("p")
     const descriptionItemTextNode = document.createTextNode(description)
     descriptionItemText.appendChild(descriptionItemTextNode)
-    descriptionLi.appendChild(descriptionItemText)
+    leftDiv.appendChild(descriptionItemText)
 
-    console.log(descriptionLi)
+    const deleteIcon = document.createElement("i")
+    deleteIcon.setAttribute("class", "bi-trash3", "bi")
+    rightDiv.appendChild(deleteIcon)
 
-    addTaskUl.appendChild(descriptionLi)
+    addTaskUl.appendChild(taskLi)
+
 }
 
-addTaskUl.addEventListener("click", (e)=> {
-    console.log(e.target)
+// addTaskUl.addEventListener("click", (e) => {
+//     console.log(e.target)
+// })
 
-    if(e.target.classList.contains("bi-trash3")) {
-        e.target.parentElement.remove()
+
+addTaskUl.addEventListener("click", (e)=> {
+    // console.log(e.target.parentElement)
+
+    if(e.target.className == "bi-trash3" ) {
+        e.target.parentElement.parentElement.remove()
     }
 })
