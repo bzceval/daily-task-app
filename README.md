@@ -17,16 +17,16 @@ I used **HTML** in my index page and applied the **JavaScript** language to give
     ELSE </br>
     SET innerHTML += input.value </br>    
 
-## Step by Step Coding
+## Step by Step Javascript Coding
 [x] Get Document Elements With JS </br> 
 [x] Add AddButon and a listen event to it. </br> 
 [x] Check if task item input value is entered with console log but you shouldn't take a space as a task.</br> 
 [x] Check if task description input value is entered with console log but you shouldn't take a space as a task.</br> 
-[x] Else create a new dataset. 
-[x] Call the function that creates the new li element for task input item data. 
-[x] Call the function that creates the new li element for description input data. 
+[x] Else create a new dataset.</br>
+[x] Call the function that creates the new li element for task input item data.</br>
+[x] Call the function that creates the new li element for description input data.</br>
 [x] And empty the of both input.</br>
-[x] Empty the input if no task item input value and task descripton input value. </br>
+[x] Empty the input if no task item input value and task descripton input value.</br>
 *Finish this function for now. Because I will add localStorage after finishing Dom activities.*</br>
 [x] Created a function that takes a dynamic data parameter that the li element element for task input item will be in.
 [x] Create a new li element and assign it the object's id and the completed class.</br>
