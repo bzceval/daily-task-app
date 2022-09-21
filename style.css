@@ -76,3 +76,21 @@ body {
 .review-section li {
     list-style-type: none;
 }
+
+.right-div {
+    width: 40%;
+    background-color: rebeccapurple;
+    height: 100%;
+}
+
+.left-div {    
+    width: 90%;
+    background-color: cyan;
+    height: 100%;
+}
+
+.add-task-ul .taskItem {
+    width: 90%;
+    height: 100px;
+    display: flex;
+}
