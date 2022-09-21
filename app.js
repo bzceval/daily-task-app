@@ -20,7 +20,6 @@ addTaskBtnEl.addEventListener("click", () => {
             completed: false,
         }
         createItemElement(newTask)
-        // createDescriptionElement(newTask)
         //Dom ve local için ayrı ayrı push eklenecek
         itemInputEl.value = ""
         descriptionInputEl.value = ""
@@ -45,10 +44,19 @@ function createItemElement(newTask) {
     taskLi.appendChild(leftDiv)
     taskLi.appendChild(rightDiv)
 
+    const editIconTask = document.createElement("i")
+    editIconTask.setAttribute("class", "bi-pencil-square", "bi", "edit-icon-task")
+    leftDiv.appendChild(editIconTask)
+
+
     const taskItemText = document.createElement("p")
     const taskItemTextNode = document.createTextNode(task)
     taskItemText.appendChild(taskItemTextNode)
     leftDiv.appendChild(taskItemText)
+
+    const editIconDescription = document.createElement("i")
+    editIconDescription.setAttribute("class", "bi-pencil-square", "bi", "edit-icon-description")
+    leftDiv.appendChild(editIconDescription)
 
     const descriptionItemText = document.createElement("p")
     const descriptionItemTextNode = document.createTextNode(description)
@@ -63,15 +71,22 @@ function createItemElement(newTask) {
 
 }
 
-// addTaskUl.addEventListener("click", (e) => {
-//     console.log(e.target)
-// })
-
 
 addTaskUl.addEventListener("click", (e)=> {
-    // console.log(e.target.parentElement)
+    console.log(e.target)
 
     if(e.target.className == "bi-trash3" ) {
         e.target.parentElement.parentElement.remove()
     }
 })
+
+
+addTaskUl.addEventListener("keydown", (e) => {
+    if(e.code === "Enter") {
+        addTaskBtnEl.click()
+    }
+})
+
+window.onload = function() {
+    itemInputEl.focus()
+}
