@@ -3,6 +3,17 @@ const itemInputEl = document.querySelector('#todo-item-input')
 const descriptionInputEl = document.querySelector("#todo-description-input")
 const addTaskUl = document.querySelector(".add-task-ul")
 
+//Date Selectors
+const dayEl = document.querySelector(".day")
+const monthEl = document.querySelector(".month")
+const yearEl = document.querySelector(".year")
+
+//Time Selectors
+const clockEl = document.querySelector(".clock")
+const minutesEl = document.querySelector(".minutes")
+const ampmEl = document.querySelector(".am-pm")
+
+
 //Button Selectors
 const addTaskBtnEl = document.querySelector(".add-task-btn")
 
@@ -89,4 +100,20 @@ addTaskUl.addEventListener("keydown", (e) => {
 
 window.onload = function() {
     itemInputEl.focus()
+}
+
+//Date and Time
+const monthStringEl = new Date() 
+const parseMonthString = { month: 'long'};
+monthEl.textContent = new Intl.DateTimeFormat('en-US', parseMonthString).format(monthStringEl);
+dayEl.textContent = ` ${new Date().getDay()}`
+yearEl.textContent = new Date().getFullYear()
+
+clockEl.textContent = new Date().getHours() > 9 ? clockEl.textContent = new Date().getHours() : `0${clockEl.textContent = new Date().getHours()}`
+
+const minutesCounterEl = new Date().getMinutes();
+if(minutesCounterEl > 00 || minutesCounterEl > 12) {
+    minutesEl.innerHTML = ` : ${minutesCounterEl} AM`
+} else {
+    minutesEl.innerHTML = ` : ${minutesCounterEl} PM`
 }
