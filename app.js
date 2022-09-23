@@ -106,7 +106,9 @@ window.onload = function() {
 const monthStringEl = new Date() 
 const parseMonthString = { month: 'long'};
 monthEl.textContent = new Intl.DateTimeFormat('en-US', parseMonthString).format(monthStringEl);
+
 dayEl.textContent = ` ${new Date().getDay()}`
+console.log(dayEl)
 yearEl.textContent = new Date().getFullYear()
 
 clockEl.textContent = new Date().getHours() > 9 ? clockEl.textContent = new Date().getHours() : `0${clockEl.textContent = new Date().getHours()}`
