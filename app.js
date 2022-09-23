@@ -51,12 +51,20 @@ function createItemElement(newTask) {
 
     const rightDiv = document.createElement("div")
     rightDiv.setAttribute("class", "right-div")
-    
+
+    // const taskDiv = document.querySelector("div")
+    // taskDiv.setAttribute("class", "task-div")
+
+    // const descriptionDiv = document.querySelector("div")
+    // descriptionDiv.setAttribute("class", "description-div")
+
     taskLi.appendChild(leftDiv)
     taskLi.appendChild(rightDiv)
+    // leftDiv.appendChild(taskDiv)
+    // leftDiv.appendChild(descriptionDiv)
 
     const editIconTask = document.createElement("i")
-    editIconTask.setAttribute("class", "bi-pencil-square", "bi", "edit-icon-task")
+    editIconTask.setAttribute("class", "bi-pencil-square edit-icon-task bi")
     leftDiv.appendChild(editIconTask)
 
 
@@ -66,7 +74,7 @@ function createItemElement(newTask) {
     leftDiv.appendChild(taskItemText)
 
     const editIconDescription = document.createElement("i")
-    editIconDescription.setAttribute("class", "bi-pencil-square", "bi", "edit-icon-description")
+    editIconDescription.setAttribute("class", "bi-pencil-square edit-icon-description bi")
     leftDiv.appendChild(editIconDescription)
 
     const descriptionItemText = document.createElement("p")
@@ -75,7 +83,7 @@ function createItemElement(newTask) {
     leftDiv.appendChild(descriptionItemText)
 
     const deleteIcon = document.createElement("i")
-    deleteIcon.setAttribute("class", "bi-trash3", "bi")
+    deleteIcon.setAttribute("class", "bi bi-trash3")
     rightDiv.appendChild(deleteIcon)
 
     addTaskUl.appendChild(taskLi)
