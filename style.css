@@ -77,10 +77,19 @@ body {
     list-style-type: none;
 }
 
+.add-task-ul .taskItem {
+    width: 90%;
+    height: 100px;
+    display: flex;
+}
+
 .right-div {
     width: 40%;
     background-color: rebeccapurple;
-    height: 100%;
+    height: 100%; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .left-div {    
@@ -89,8 +98,11 @@ body {
     height: 100%;
 }
 
-.add-task-ul .taskItem {
-    width: 90%;
-    height: 100px;
-    display: flex;
+
+/*icon sizes*/
+.bi {
+    padding: 10px;
+    background-color: #1D4F4C;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
