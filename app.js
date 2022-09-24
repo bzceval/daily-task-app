@@ -83,7 +83,7 @@ function createItemElement(newTask) {
     leftDiv.appendChild(descriptionItemText)
 
     const deleteIcon = document.createElement("i")
-    deleteIcon.setAttribute("class", "bi-trash3", "bi")
+    deleteIcon.setAttribute("class", "bi bi-trash3")
     rightDiv.appendChild(deleteIcon)
 
     addTaskUl.appendChild(taskLi)
