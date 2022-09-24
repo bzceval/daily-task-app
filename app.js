@@ -20,9 +20,9 @@ const addTaskBtnEl = document.querySelector(".add-task-btn")
 
 addTaskBtnEl.addEventListener("click", () => {
     if(itemInputEl.value.trim() === "") {
-        console.log("item input yok")
+        alert("item input yok")
     } else if (descriptionInputEl.value.trim() === "") {
-        console.log("description input yok")
+        alert("description input yok")
     } else {
         const newTask = {
             id: new Date().getTime(),
@@ -64,7 +64,7 @@ function createItemElement(newTask) {
     // leftDiv.appendChild(descriptionDiv)
 
     const editIconTask = document.createElement("i")
-    editIconTask.setAttribute("class", "bi-pencil-square edit-icon-task bi")
+    editIconTask.setAttribute("class", "bi bi-pencil-square edit-icon-task")
     leftDiv.appendChild(editIconTask)
 
 
@@ -74,7 +74,7 @@ function createItemElement(newTask) {
     leftDiv.appendChild(taskItemText)
 
     const editIconDescription = document.createElement("i")
-    editIconDescription.setAttribute("class", "bi-pencil-square edit-icon-description bi")
+    editIconDescription.setAttribute("class", "bi bi-pencil-square edit-icon-description")
     leftDiv.appendChild(editIconDescription)
 
     const descriptionItemText = document.createElement("p")
@@ -83,7 +83,7 @@ function createItemElement(newTask) {
     leftDiv.appendChild(descriptionItemText)
 
     const deleteIcon = document.createElement("i")
-    deleteIcon.setAttribute("class", "bi bi-trash3")
+    deleteIcon.setAttribute("class", "bi-trash3", "bi")
     rightDiv.appendChild(deleteIcon)
 
     addTaskUl.appendChild(taskLi)
@@ -97,9 +97,11 @@ addTaskUl.addEventListener("click", (e)=> {
     if(e.target.className == "bi-trash3" ) {
         e.target.parentElement.parentElement.remove()
     }
+
+    
 })
 
-
+//keyboard enter click event
 addTaskUl.addEventListener("keydown", (e) => {
     if(e.code === "Enter") {
         addTaskBtnEl.click()
