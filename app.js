@@ -16,6 +16,18 @@ const ampmEl = document.querySelector(".am-pm");
 //Button Selectors
 const addTaskBtnEl = document.querySelector(".add-task-btn");
 
+// LocalStorage Setting
+let todos = JSON.parse(localStorage.getItem("TODOS")) || [] 
+console.log(todos)
+
+//
+const renderSavedTodos = () => {
+    todos.forEach((todo) => {
+        createItemElement(todo)
+    })
+}
+renderSavedTodos()
+
 addTaskBtnEl.addEventListener("click", () => {
   if (itemInputEl.value.trim() === "") {
     alert("item input yok");
@@ -29,7 +41,14 @@ addTaskBtnEl.addEventListener("click", () => {
       completed: false,
     };
     createItemElement(newTask);
-    //Dom ve local için ayrı ayrı push eklenecek
+    // Push the parameter you get from the function
+    todos.push(newTask)
+    // Make set of todos in localStorage
+    localStorage.setItem("TODOS", JSON.stringify(todos))
+    console.log(todos)
+    
+
+    // empty the inputs
     itemInputEl.value = "";
     descriptionInputEl.value = "";
   }
@@ -60,40 +79,36 @@ function createItemElement(newTask) {
   leftDiv.appendChild(taskLiDiv);
   leftDiv.appendChild(descriptionLiDiv);
 
- 
-
   //task div edit icon
   const editIconTask = document.createElement("i");
   editIconTask.setAttribute("class", "bi bi-pencil-square");
-  taskLiDiv.appendChild(editIconTask)
-
+  taskLiDiv.appendChild(editIconTask);
 
   //task div p
   const taskItemText = document.createElement("p");
 
-  taskItemText.setAttribute("class", "task")
-
+  taskItemText.setAttribute("class", "task");
 
   const taskItemTextNode = document.createTextNode(task);
   taskItemText.appendChild(taskItemTextNode);
-  taskLiDiv.appendChild(taskItemText)
+  taskLiDiv.appendChild(taskItemText);
 
   // description div edit icon
   const editIconDescription = document.createElement("i");
-  editIconDescription.setAttribute("class", "bi bi-pencil-square edit-icon-description");
-  descriptionLiDiv.appendChild(editIconDescription)
-
+  editIconDescription.setAttribute(
+    "class",
+    "bi bi-pencil-square edit-icon-description"
+  );
+  descriptionLiDiv.appendChild(editIconDescription);
 
   // description div p
   const descriptionItemText = document.createElement("p");
 
-  descriptionItemText.setAttribute("class", "description")
+  descriptionItemText.setAttribute("class", "description");
 
   const descriptionItemTextNode = document.createTextNode(description);
   descriptionItemText.appendChild(descriptionItemTextNode);
-  descriptionLiDiv.appendChild(descriptionItemText)
-  
-
+  descriptionLiDiv.appendChild(descriptionItemText);
 
   //trash icon
   const deleteIcon = document.createElement("i");
@@ -107,9 +122,15 @@ function createItemElement(newTask) {
 addTaskUl.addEventListener("click", (e) => {
   console.log(e.target);
 
+  //
+  const id = e.target.parentElement.parentElement.getAttribute("id")
+  
+  // Above the delete event button?
   if (e.target.className == "bi bi-trash3") {
     e.target.parentElement.parentElement.remove();
   }
+
+
 });
 
 //keyboard enter click event
@@ -123,7 +144,7 @@ window.onload = function () {
   itemInputEl.focus();
 };
 
-//Date and Time
+// Date and Time
 const monthStringEl = new Date();
 const parseMonthString = { month: "long" };
 monthEl.textContent = new Intl.DateTimeFormat("en-US", parseMonthString).format(
@@ -131,7 +152,7 @@ monthEl.textContent = new Intl.DateTimeFormat("en-US", parseMonthString).format(
 );
 
 dayEl.textContent = ` ${new Date().getDay()}`;
-console.log(dayEl);
+// console.log(dayEl);
 yearEl.textContent = new Date().getFullYear();
 
 clockEl.textContent =
