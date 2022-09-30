@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'Baloo 2', cursive;  
+    font-family: 'Baloo 2', cursive; 
+    background-color: #B5AA9E;
+     
 } 
 .add-section { 
     background-image: url(./images/background.jpg);
@@ -32,17 +34,25 @@ body {
     background-color: transparent;
     color: rgba(255, 255, 255, 0.7);
     border: none;
+    border-radius: .3rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
-    box-shadow: rgba(99, 99, 99, 0.4) 1px 1px 3px 0px;
+    box-shadow: rgba(99, 99, 99, 0.4) 1px 1px 2px 0px;
     outline: none;
     width: 80%;
-    margin: 20px 0;
+    margin: 20px 0; 
     padding: 10px 0;  
     font-size: 1rem;
+    font-family: 'Baloo 2', cursive; 
+}
+.daily-task input::placeholder { 
+    font-family: 'Baloo 2', cursive; 
+    font-size: 1rem;
+    padding-left: 1rem;
 }
 .daily-task input:focus {
     box-shadow: rgba(99, 99, 99, 0.4) 1px 3px 8px 2px;
     transition: all 0.5s;
+    padding-left: 1rem;
 }
 .add-task-btn {
     background-color: #1D4F4C;
@@ -67,9 +77,8 @@ body {
     bottom: 1rem;
     font-size: 12px; 
 }
-.review-section {
-    background-color: #B5AA9E;
-    height: 50vh;
+.review-section { 
+    /* height: 50vh; */
     color: #542C08; 
     padding: 50px 0px 50px 30px;
 }
