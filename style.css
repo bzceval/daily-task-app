@@ -138,8 +138,8 @@ body {
 }
 .bi-trash3 {
   font-size: 1.5rem;
-  padding-right: .7rem;
-} 
+  padding-right: 0.7rem;
+}
 
 /* toggle control */
 li.checked .complated-icon {
@@ -148,8 +148,14 @@ li.checked .complated-icon {
 li.checked .task {
   color: #1d4f4c87;
   text-decoration: line-through;
-} 
+}
 li.checked .description {
   color: rgba(84, 43, 8, 0.6);
   text-decoration: line-through;
+}
+li.checked .bi {
+  color: #1d4f4c87;
+}
+li.checked .edit-icon-description {
+  color: rgba(84, 43, 8, 0.6);
 }
