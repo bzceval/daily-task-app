@@ -77,14 +77,18 @@ body {
     list-style-type: none;
 }
 
+/* TASK */
 .add-task-ul .taskItem {
-    width: 90%;
-    height: 100px;
+    /* width: 90%; */
+    /* height: 100px; */
     display: flex;
+    gap: 3rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .right-div {
-    width: 40%;
+    width: 20%;
     background-color: rebeccapurple;
     height: 100%; 
     display: flex;
@@ -98,6 +102,17 @@ body {
     height: 100%;
 }
 
+.task-li-div {
+    display: flex;
+    padding: 20px;
+    background-color: rgb(51, 74, 3);
+}
+.description-li-div {
+    display: flex;
+    padding: 20px;
+    background-color: red;
+} 
+ 
 
 /*icon sizes*/
 .bi {
