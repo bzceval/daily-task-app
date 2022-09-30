@@ -126,10 +126,13 @@ addTaskUl.addEventListener("click", (e) => {
   const id = e.target.parentElement.parentElement.getAttribute("id")
   
   // Above the delete event button?
-  if (e.target.className == "bi bi-trash3") {
+  if (e.target.classList.contains("bi-trash3")) {
     e.target.parentElement.parentElement.remove();
-  }
-
+    //delete from local
+    todos = todos.filter((todo) => todo.id !== Number(id))
+    localStorage.setItem("TODOS", JSON.stringify(todos))
+  } 
+//   else if (e.target.classList.contains (""))
 
 });
 
