@@ -88,10 +88,12 @@ body {
 .review-section li {
     list-style-type: none;
 }
+
+
 /* TASK */
 .add-task-ul .taskItem {
-    width: 90%;
-    height: 100px;
+    /* width: 90%; */
+    /* height: 100px; */
     display: flex;
     /* gap: 3rem; */
     margin-top: 30px;
@@ -100,7 +102,6 @@ body {
 }
 /* RIGHT DIV */
 .right-div {
-    width: 20%; 
     height: 100%; 
     display: flex;
     justify-content: flex-end;
@@ -111,6 +112,7 @@ body {
     width: 90%;
     height: 100%;
 }
+
 /* task div */
 .task-li-div {
     display: flex;
@@ -130,6 +132,7 @@ body {
     font-size: 600; 
     font-size: 1.2rem; 
 } 
+
 
 /*icon sizes*/
 .bi { 
