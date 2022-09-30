@@ -70,7 +70,7 @@ function createItemElement(newTask) {
 
   //task div p
   const taskItemText = document.createElement("p");
-//   taskItemText.setAttribute("class", "task")
+  taskItemText.setAttribute("class", "task")
   const taskItemTextNode = document.createTextNode(task);
   taskItemText.appendChild(taskItemTextNode);
   taskLiDiv.appendChild(taskItemText)
@@ -83,7 +83,7 @@ function createItemElement(newTask) {
 
   // description div p
   const descriptionItemText = document.createElement("p");
-//   descriptionItemText.setAttribute("class", "description")
+  descriptionItemText.setAttribute("class", "description")
   const descriptionItemTextNode = document.createTextNode(description);
   descriptionItemText.appendChild(descriptionItemTextNode);
   descriptionLiDiv.appendChild(descriptionItemText)

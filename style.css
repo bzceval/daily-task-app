@@ -73,51 +73,60 @@ body {
     color: #542C08; 
     padding: 50px 0px 50px 30px;
 }
+.review-section h2 {
+    font-size: 40px;
+}
 .review-section li {
     list-style-type: none;
 }
-
 /* TASK */
 .add-task-ul .taskItem {
-    /* width: 90%; */
-    /* height: 100px; */
+    width: 90%;
+    height: 100px;
     display: flex;
-    gap: 3rem;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    /* gap: 3rem; */
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom: 5px solid rgba(84, 43, 8, 0.3);
 }
-
+/* RIGHT DIV */
 .right-div {
-    width: 20%;
-    background-color: rebeccapurple;
+    width: 20%; 
     height: 100%; 
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
-
+/* LEFT DIV */
 .left-div {    
     width: 90%;
-    background-color: cyan;
     height: 100%;
 }
-
+/* task div */
 .task-li-div {
     display: flex;
-    padding: 20px;
-    background-color: rgb(51, 74, 3);
 }
+.task-li-div .task {
+    padding-left: .5rem; 
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+/* description div */
 .description-li-div {
     display: flex;
-    padding: 20px;
-    background-color: red;
 } 
- 
+.description-li-div .description {
+    display: flex;
+    padding-left: .5rem;
+    font-size: 600; 
+    font-size: 1.2rem; 
+} 
 
 /*icon sizes*/
-.bi {
-    padding: 10px;
-    background-color: #1D4F4C;
-    font-size: 1.5rem;
+.bi { 
     font-weight: bold;
+    font-size: 1.5rem;
+}
+.bi-trash3 {
+    font-size: 2rem;
 }
