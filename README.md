@@ -44,18 +44,4 @@ I used **HTML** in my index page and applied the **JavaScript** language to give
 [x] Store the final version of the set array in localStorage</br>
 [x] Update todos array with data from localStorage </br>
 [x] Set localStorage for delete button. </br>
-
- 
-
-
-
-
-[ ] Adding is possible with the enter key</br>
-[ ] Add DeleteButton and a listen event to it. </br> 
-[ ] Delete last added item when event click </br> 
-[ ]
-[ ]
-[ ]
-[ ]
-[ ]
-
+[x] Checked function created and edited style </br>
