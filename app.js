@@ -18,7 +18,7 @@ const addTaskBtnEl = document.querySelector(".add-task-btn");
 
 // LocalStorage Setting
 let todos = JSON.parse(localStorage.getItem("TODOS")) || [];
-console.log(todos);
+// console.log(todos);
 
 //
 const renderSavedTodos = () => {
@@ -47,7 +47,7 @@ addTaskBtnEl.addEventListener("click", () => {
 
     // Make set of todos in localStorage
     localStorage.setItem("TODOS", JSON.stringify(todos));
-    console.log(todos);
+    // console.log(todos);
 
     // empty the inputs
     itemInputEl.value = "";
@@ -81,18 +81,13 @@ function createItemElement(newTask) {
   leftDiv.appendChild(taskLiDiv);
   leftDiv.appendChild(descriptionLiDiv);
 
-  // newTodo.completed ? li.classList.add("completed") : "";
-  completed && li.classList.add("checked");
+  // newTask.completed ? taskLi.classList.add("checked") : "";
+  newTask.completed && taskLi.classList.add("checked");
 
   //task div edit icon
   const editIconTask = document.createElement("i");
   editIconTask.setAttribute("class", "bi bi-pencil-square");
   taskLiDiv.appendChild(editIconTask);
-
-  //okay icon
-  const okIconTask = document.createElement("i");
-  okIconTask.setAttribute("class", "bi bi-check2-square");
-  taskLiDiv.appendChild(okIconTask);
 
   //task div p
   const taskItemText = document.createElement("p");
@@ -111,11 +106,6 @@ function createItemElement(newTask) {
   );
   descriptionLiDiv.appendChild(editIconDescription);
 
-  //okay icon
-  const okdesIconTask = document.createElement("i");
-  okdesIconTask.setAttribute("class", "bi bi-check2-square");
-  descriptionLiDiv.appendChild(okdesIconTask);
-
   // description div p
   const descriptionItemText = document.createElement("p");
 
@@ -130,12 +120,17 @@ function createItemElement(newTask) {
   deleteIcon.setAttribute("class", "bi bi-trash3");
   rightDiv.appendChild(deleteIcon);
 
+  //complated icon
+  const okIcon = document.createElement("i");
+  okIcon.setAttribute("class", "bi bi-check-circle complated-icon");
+  rightDiv.appendChild(okIcon);
+
   addTaskUl.appendChild(taskLi);
 }
 
 //event capturing
 addTaskUl.addEventListener("click", (e) => {
-  console.log(e.target);
+  // console.log(e.target);
 
   const id = e.target.parentElement.parentElement.getAttribute("id");
 
@@ -146,15 +141,15 @@ addTaskUl.addEventListener("click", (e) => {
     todos = todos.filter((todo) => todo.id !== Number(id));
 
     localStorage.setItem("TODOS", JSON.stringify(todos));
-  } else if (e.target.classList.contains("bi-check2-square")) {
-    e.target.parentElement.classList.toggle("checked");
-
+  } else if (e.target.classList.contains("bi-check-circle")) {
+    console.log("evet");
+    e.target.parentElement.parentElement.classList.toggle("checked")
     todos.map((todo, index) => {
       if (todo.id == id) {
         todos[index].completed = !todos[index].completed;
       }
     });
-    console.log(todos);
+    // console.log(todos)
     localStorage.setItem("TODOS", JSON.stringify(todos));
   }
 });

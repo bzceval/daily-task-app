@@ -95,7 +95,7 @@ body {
   /* gap: 3rem; */
   margin-top: 30px;
   margin-bottom: 30px;
-  border-bottom: 5px solid rgba(84, 43, 8, 0.3);
+  border-bottom: 5px solid rgba(84, 43, 8, 0.5);
 }
 /* RIGHT DIV */
 .right-div {
@@ -137,8 +137,19 @@ body {
   font-size: 1.5rem;
 }
 .bi-trash3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  padding-right: .7rem;
+} 
+
+/* toggle control */
+li.checked .complated-icon {
+  color: #1d4f4c;
 }
-.bi-check2-square {
-    padding-left: .5rem;
+li.checked .task {
+  color: #1d4f4c87;
+  text-decoration: line-through;
+} 
+li.checked .description {
+  color: rgba(84, 43, 8, 0.6);
+  text-decoration: line-through;
 }
