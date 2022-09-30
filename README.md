@@ -41,7 +41,9 @@ I used **HTML** in my index page and applied the **JavaScript** language to give
 [x] Let the input be active at the start</br>
 [x] Inject the same things on the keyboard with the enter key to insert and the spacebar to delete. </br> 
 *Clicking the event will create your to-do list.</br>*
-[ ] Store the final version of the set array in localStorage</br>
+[x] Store the final version of the set array in localStorage</br>
+[x] Update todos array with data from localStorage </br>
+[x] Set localStorage for delete button. </br>
 
  
 
@@ -56,7 +58,4 @@ I used **HTML** in my index page and applied the **JavaScript** language to give
 [ ]
 [ ]
 [ ]
-[ ]
-[ ]it should push the data from the li function with the parameter to the parsed array for localStorage, set data for DOM.
-[ ] update todos array with data from localStorage </br>
-[ ] If there is no item named todos in localStroge, assign an empty array. </br>
+

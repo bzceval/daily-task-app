@@ -17,16 +17,16 @@ const ampmEl = document.querySelector(".am-pm");
 const addTaskBtnEl = document.querySelector(".add-task-btn");
 
 // LocalStorage Setting
-let todos = JSON.parse(localStorage.getItem("TODOS")) || [] 
-console.log(todos)
+let todos = JSON.parse(localStorage.getItem("TODOS")) || [];
+console.log(todos);
 
 //
 const renderSavedTodos = () => {
-    todos.forEach((todo) => {
-        createItemElement(todo)
-    })
-}
-renderSavedTodos()
+  todos.forEach((todo) => {
+    createItemElement(todo);
+  });
+};
+renderSavedTodos();
 
 addTaskBtnEl.addEventListener("click", () => {
   if (itemInputEl.value.trim() === "") {
@@ -42,11 +42,10 @@ addTaskBtnEl.addEventListener("click", () => {
     };
     createItemElement(newTask);
     // Push the parameter you get from the function
-    todos.push(newTask)
+    todos.push(newTask);
     // Make set of todos in localStorage
-    localStorage.setItem("TODOS", JSON.stringify(todos))
-    console.log(todos)
-    
+    localStorage.setItem("TODOS", JSON.stringify(todos));
+    console.log(todos);
 
     // empty the inputs
     itemInputEl.value = "";
@@ -123,17 +122,16 @@ addTaskUl.addEventListener("click", (e) => {
   console.log(e.target);
 
   //
-  const id = e.target.parentElement.parentElement.getAttribute("id")
-  
+  const id = e.target.parentElement.parentElement.getAttribute("id");
+
   // Above the delete event button?
   if (e.target.classList.contains("bi-trash3")) {
     e.target.parentElement.parentElement.remove();
     //delete from local
-    todos = todos.filter((todo) => todo.id !== Number(id))
-    localStorage.setItem("TODOS", JSON.stringify(todos))
-  } 
-//   else if (e.target.classList.contains (""))
-
+    todos = todos.filter((todo) => todo.id !== Number(id));
+    localStorage.setItem("TODOS", JSON.stringify(todos));
+  }
+  //   else if (e.target.classList.contains (""))
 });
 
 //keyboard enter click event
