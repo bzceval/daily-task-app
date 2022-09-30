@@ -159,3 +159,43 @@ li.checked .bi {
 li.checked .edit-icon-description {
   color: rgba(84, 43, 8, 0.6);
 }
+
+/*modal*/
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  background-color: #285A57;
+  text-align: center;
+  padding: 30px 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  width: 500px;
+  max-width: 100%;
+  font-size: 1.5rem;
+}
+.modal i {
+  font-size: 3rem;
+}
+.modal button {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 1.3rem;
+  color: #285A57;
+  font-weight: bold;
+  padding: 13px 30px;
+  margin-top: 20px;
+  font-family: "Baloo 2", cursive;
+}

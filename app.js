@@ -20,13 +20,17 @@ const addTaskBtnEl = document.querySelector(".add-task-btn");
 let todos = JSON.parse(localStorage.getItem("TODOS")) || [];
 // console.log(todos);
 
-//
+// make of render
 const renderSavedTodos = () => {
   todos.forEach((todo) => {
     createItemElement(todo);
   });
 };
 renderSavedTodos();
+
+// window.addEventListener("load", () => {
+//   modal()
+// })
 
 addTaskBtnEl.addEventListener("click", () => {
   if (itemInputEl.value.trim() === "") {
@@ -187,3 +191,4 @@ if (minutesCounterEl > 00 || minutesCounterEl > 12) {
 } else {
   minutesEl.innerHTML = ` : ${minutesCounterEl} PM`;
 }
+
