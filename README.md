@@ -7,16 +7,7 @@ I used **HTML** in my index page and applied the **JavaScript** language to give
 ## Design
 - [Figma Design](https://www.figma.com/file/Po79NBfsNv6HeDX5ov9KON/Todo-App-%7C-JS?node-id=0%3A1)
 
-
-## Pseudo Code
-- BEGIN
-- OUTPUT "Please Add Todo List"
-- INPUT input.value </br>
-    IF ( !input.value ) </br>
-    OUTPUT "Please Enter A Todo Item" </br>
-    ELSE </br>
-    SET innerHTML += input.value </br>    
-
+  
 ## Step by Step Javascript Coding
 [x] Get document elements with JS </br> 
 [x] Add AddButon and a listen event to it. </br> 
