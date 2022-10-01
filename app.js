@@ -4,7 +4,7 @@ const descriptionInputEl = document.querySelector("#todo-description-input");
 const addTaskUl = document.querySelector(".add-task-ul");
 
 //Date Selectors
-const dateEl = document.querySelector(".date"); 
+const dateEl = document.querySelector(".date");
 
 //Time Selectors
 const clockEl = document.querySelector(".clock");
@@ -13,6 +13,17 @@ const ampmEl = document.querySelector(".am-pm");
 
 //Button Selectors
 const addTaskBtnEl = document.querySelector(".add-task-btn");
+
+//Error Selectors
+const errorMessage = document.querySelector(".errorMessage");
+
+function error(msg) {
+  errorMessage.innerHTML = `${msg}`;
+  errorMessage.style.left = "0";
+  setTimeout(() => {
+    errorMessage.style.left = "-1000px";
+  }, 3000);
+}
 
 //Modal Selectors
 const modalEl = document.querySelector(".modal-container");
@@ -32,9 +43,9 @@ renderSavedTodos();
 
 addTaskBtnEl.addEventListener("click", () => {
   if (itemInputEl.value.trim() === "") {
-    alert("item input yok");
+    error("You Must Add Task Item 🎇");
   } else if (descriptionInputEl.value.trim() === "") {
-    alert("description input yok");
+    error("You Must Add Description Item 🎇");
   } else {
     const newTask = {
       id: new Date().getTime(),
@@ -175,8 +186,8 @@ modalBtn.addEventListener("click", () => {
 });
 
 // Date and Time
-const date = new Date().toDateString()
-dateEl.textContent = ` ${date}`; 
+const date = new Date().toDateString();
+dateEl.textContent = ` ${date}`;
 
 clockEl.textContent =
   new Date().getHours() > 9
