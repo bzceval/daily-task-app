@@ -213,6 +213,7 @@ li.checked .edit-icon-description {
   font-size: 1rem;
   overflow: hidden;
 }
+
 .errorBox .errorMessage {
   position: relative;
   background-color: rgba(84, 43, 8, 0.3);
