@@ -254,10 +254,27 @@ li.checked .edit-icon-description {
     font-size: .5rem;
     overflow: hidden;
   }
-  
   .errorBox .errorMessage {
     position: relative;
     background-color: rgba(84, 43, 8, 0.4);
     padding: 5px; 
+  }
+  .review-section h2 {
+    font-size: 1.1rem;
+  }
+  .task-li-div .task {
+    font-size: 1rem;
+  }
+  .description-li-div {
+    display: flex;
+  }
+  .description-li-div .description {
+    font-size: .9rem;
+  }
+  .bi { 
+    font-size: 1rem;
+  }
+  .bi-trash3 { 
+    padding-right: 0.5rem;
   }
 }
