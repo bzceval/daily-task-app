@@ -1,5 +1,5 @@
 ## Project About
-*Actually, when starting the project, I didn't want it to progress by keeping the data in localStorage. But but when I designed it in **Figma**  my muses came and asked me to do this. I hope you like it. Oh, by the way, I added the steps I followed below and of course my `Pseudocode`. Thanks* 🤸‍♀️
+*Actually, when starting the project, I didn't want it to progress by keeping the data in localStorage. But but when I designed it in **Figma**  my muses came and asked me to do this. I hope you like it. Oh, by the way, I added the steps I followed below and of course my `Step By Step Coding`. Thanks* 🤸‍♀️
 
 ## Use Technologies
 I used **HTML** in my index page and applied the **JavaScript** language to give it dynamism. And of course **CSS** is indispensable to make it look beautiful on the eye. **Bootstrap** framework helped me a lot in grid structure.
