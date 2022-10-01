@@ -275,6 +275,6 @@ li.checked .edit-icon-description {
     font-size: 1rem;
   }
   .bi-trash3 { 
-    padding-right: 0.5rem;
+    padding-right: .8rem;
   }
 }
