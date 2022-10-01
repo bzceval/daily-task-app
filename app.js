@@ -157,11 +157,6 @@ addTaskUl.addEventListener("click", (e) => {
   }
 });
 
-//edit task
-// function editTask(e) {
-
-// }
-
 //keyboard enter click event
 addTaskUl.addEventListener("keydown", (e) => {
   if (e.code === "Enter") {
