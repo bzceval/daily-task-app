@@ -16,6 +16,10 @@ const ampmEl = document.querySelector(".am-pm");
 //Button Selectors
 const addTaskBtnEl = document.querySelector(".add-task-btn");
 
+//Modal Selectors
+const modalEl = document.querySelector(".modal-container");
+const modalBtn = document.querySelector("#modal-ok");
+
 // LocalStorage Setting
 let todos = JSON.parse(localStorage.getItem("TODOS")) || [];
 // console.log(todos);
@@ -28,9 +32,6 @@ const renderSavedTodos = () => {
 };
 renderSavedTodos();
 
-// window.addEventListener("load", () => {
-//   modal()
-// })
 
 addTaskBtnEl.addEventListener("click", () => {
   if (itemInputEl.value.trim() === "") {
@@ -147,7 +148,7 @@ addTaskUl.addEventListener("click", (e) => {
     localStorage.setItem("TODOS", JSON.stringify(todos));
   } else if (e.target.classList.contains("bi-check-circle")) {
     console.log("evet");
-    e.target.parentElement.parentElement.classList.toggle("checked")
+    e.target.parentElement.parentElement.classList.toggle("checked");
     todos.map((todo, index) => {
       if (todo.id == id) {
         todos[index].completed = !todos[index].completed;
@@ -166,8 +167,15 @@ addTaskUl.addEventListener("keydown", (e) => {
 });
 
 window.onload = function () {
-  itemInputEl.focus();
+  itemInputEl.focus(); 
+  modalEl.classList.add("show")
 };
+
+modalBtn.addEventListener("click", () => {
+  console.log("modalı kapat")
+  modalEl.style.display = "none"
+})
+
 
 // Date and Time
 const monthStringEl = new Date();
@@ -191,4 +199,3 @@ if (minutesCounterEl > 00 || minutesCounterEl > 12) {
 } else {
   minutesEl.innerHTML = ` : ${minutesCounterEl} PM`;
 }
-

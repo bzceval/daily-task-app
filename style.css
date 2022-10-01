@@ -172,11 +172,15 @@ li.checked .edit-icon-description {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  pointer-events: none;
+  /* opacity: 0;
+  pointer-events: none; */
 }
+/* .modal-container .show {
+  opacity: 1;
+  pointer-events: auto;
+} */
 .modal {
-  background-color: #285A57;
+  background-color: #285a57;
   text-align: center;
   padding: 30px 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -193,9 +197,14 @@ li.checked .edit-icon-description {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   font-size: 1.3rem;
-  color: #285A57;
-  font-weight: bold;
-  padding: 13px 30px;
+  color: #285a57;
+  font-weight: 500;
+  padding: 5px 50px;
   margin-top: 20px;
   font-family: "Baloo 2", cursive;
+  cursor: pointer;
+}
+.modal button:hover {
+  transform: translate(3px, 0px);
+  transition: all 0.5s;
 }
