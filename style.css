@@ -172,13 +172,8 @@ li.checked .edit-icon-description {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* opacity: 0;
-  pointer-events: none; */
+  padding: 20px;
 }
-/* .modal-container .show {
-  opacity: 1;
-  pointer-events: auto;
-} */
 .modal {
   background-color: #285a57;
   text-align: center;

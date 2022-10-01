@@ -45,3 +45,4 @@ I used **HTML** in my index page and applied the **JavaScript** language to give
 [x] Update todos array with data from localStorage </br>
 [x] Set localStorage for delete button. </br>
 [x] Checked function created and edited style </br>
+[x] Added modal when window load </br>
