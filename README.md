@@ -27,7 +27,7 @@ I used **HTML** in my index page and applied the **JavaScript** language to give
 [x] Create delete icon and connect to li</br>
 [x] The same steps are done in the annotation function.</br>
 [x] Assign the resulting li elements to the ul element as a child. </br>
-[x] If an event comes from any of the children of the ul, detect it and take action with addEventListener. (Capturing)</br>
+[x] If an event comes from any of the children of the ul, detect it and take action with addEventListener (Capturing)</br>
 [x] If the event came from a delete button, delete the parent of the delete button from the DOM.</br>
 [x] Let the input be active at the start</br>
 [x] Inject the same things on the keyboard with the enter key to insert and the spacebar to delete. </br> 
@@ -37,3 +37,4 @@ I used **HTML** in my index page and applied the **JavaScript** language to give
 [x] Set localStorage for delete button. </br>
 [x] Checked function created and edited style </br>
 [x] Added modal when window load </br>
+[x] Added error box function </br>

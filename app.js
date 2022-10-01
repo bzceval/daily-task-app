@@ -165,6 +165,17 @@ addTaskUl.addEventListener("click", (e) => {
     // console.log(todos)
     localStorage.setItem("TODOS", JSON.stringify(todos));
   } else if (e.target.classList.contains("edit-icon-task")) {
+
+    e.target.classList.remove("bi", "bi-pencil-square");
+    e.target.classList.add("bi","bi-pencil");
+  
+    id = e.target.parentElement.parentElement.parentElement.getAttribute("id")
+
+    todos = todos.filter((todo) => todo.id !== Number(id));
+
+    todos[0].text = task.value;
+    todos = todos.filter((todo) => todo);
+   
   }
 });
 
