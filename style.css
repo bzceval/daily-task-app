@@ -224,7 +224,7 @@ li.checked .edit-icon-description {
 }
 @media screen and (max-width: 750px) {
   .create-todo h1 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   .errorBox {
     font-size: 0.7rem;
@@ -236,5 +236,14 @@ li.checked .edit-icon-description {
   }
   .daily-task input {
     font-size: 0.5rem;
+  }
+  .add-section {
+    height: 50vh;
+  }
+  .daily-task {
+    padding: 20px 0px 20px 10px;
+  }
+  .review-section {
+    padding: 20px 0px 20px 10px;
   }
 }
