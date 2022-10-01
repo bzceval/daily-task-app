@@ -1,5 +1,5 @@
 ## Project About
-*Actually, when starting the project, I didn't want it to progress by keeping the data in localStorage. But but when I designed it in **Figma**  my muses came and asked me to do this. I hope you like it. Oh, by the way, I added the steps I followed below and of course my `Pseudocode`. Thanks* 🤸‍♀️
+*Actually, when starting the project, I didn't want it to progress by keeping the data in localStorage. But but when I designed it in **Figma**  my muses came and asked me to do this. I hope you like it. Oh, by the way, I added the steps I followed below and of course my `Step By Step Coding`. Thanks* 🤸‍♀️
 
 ## Use Technologies
 I used **HTML** in my index page and applied the **JavaScript** language to give it dynamism. And of course **CSS** is indispensable to make it look beautiful on the eye. **Bootstrap** framework helped me a lot in grid structure.
@@ -7,16 +7,7 @@ I used **HTML** in my index page and applied the **JavaScript** language to give
 ## Design
 - [Figma Design](https://www.figma.com/file/Po79NBfsNv6HeDX5ov9KON/Todo-App-%7C-JS?node-id=0%3A1)
 
-
-## Pseudo Code
-- BEGIN
-- OUTPUT "Please Add Todo List"
-- INPUT input.value </br>
-    IF ( !input.value ) </br>
-    OUTPUT "Please Enter A Todo Item" </br>
-    ELSE </br>
-    SET innerHTML += input.value </br>    
-
+  
 ## Step by Step Javascript Coding
 [x] Get document elements with JS </br> 
 [x] Add AddButon and a listen event to it. </br> 
