@@ -4,9 +4,7 @@ const descriptionInputEl = document.querySelector("#todo-description-input");
 const addTaskUl = document.querySelector(".add-task-ul");
 
 //Date Selectors
-const dayEl = document.querySelector(".day");
-const monthEl = document.querySelector(".month");
-const yearEl = document.querySelector(".year");
+const dateEl = document.querySelector(".date"); 
 
 //Time Selectors
 const clockEl = document.querySelector(".clock");
@@ -31,7 +29,6 @@ const renderSavedTodos = () => {
   });
 };
 renderSavedTodos();
-
 
 addTaskBtnEl.addEventListener("click", () => {
   if (itemInputEl.value.trim() === "") {
@@ -91,7 +88,7 @@ function createItemElement(newTask) {
 
   //task div edit icon
   const editIconTask = document.createElement("i");
-  editIconTask.setAttribute("class", "bi bi-pencil-square");
+  editIconTask.setAttribute("class", "bi bi-pencil-square edit-icon-task");
   taskLiDiv.appendChild(editIconTask);
 
   //task div p
@@ -156,8 +153,14 @@ addTaskUl.addEventListener("click", (e) => {
     });
     // console.log(todos)
     localStorage.setItem("TODOS", JSON.stringify(todos));
+  } else if (e.target.classList.contains("edit-icon-task")) {
   }
 });
+
+//edit task
+// function editTask(e) {
+
+// }
 
 //keyboard enter click event
 addTaskUl.addEventListener("keydown", (e) => {
@@ -167,26 +170,18 @@ addTaskUl.addEventListener("keydown", (e) => {
 });
 
 window.onload = function () {
-  itemInputEl.focus(); 
-  modalEl.classList.add("show")
+  itemInputEl.focus();
+  modalEl.classList.add("show");
 };
 
 modalBtn.addEventListener("click", () => {
-  console.log("modalı kapat")
-  modalEl.style.display = "none"
-})
-
+  // console.log("modalı kapat")
+  modalEl.style.display = "none";
+});
 
 // Date and Time
-const monthStringEl = new Date();
-const parseMonthString = { month: "long" };
-monthEl.textContent = new Intl.DateTimeFormat("en-US", parseMonthString).format(
-  monthStringEl
-);
-
-dayEl.textContent = ` ${new Date().getDay()}`;
-// console.log(dayEl);
-yearEl.textContent = new Date().getFullYear();
+const date = new Date().toDateString()
+dateEl.textContent = ` ${date}`; 
 
 clockEl.textContent =
   new Date().getHours() > 9
