@@ -231,19 +231,16 @@ li.checked .edit-icon-description {
   }
   .add-task-btn {
     font-size: 0.6rem;
-    padding: 5px; 
+    padding: 8px; 
     margin-top: 10px;
   }
   .daily-task input {
     font-size: 0.5rem;
   }
-  .add-section {
-    height: 50vh;
-  }
   .daily-task {
-    padding: 5px 0px 5px 0px;
+    padding: 8px 0px 8px 0px;
   }
   .review-section {
-    padding: 5px 0px 5px 0px;
+    padding: 8px 0px 8px 0px;
   }
 }
