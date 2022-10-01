@@ -104,7 +104,6 @@ function createItemElement(newTask) {
 
   //task div p
   const taskItemText = document.createElement("p");
-
   taskItemText.setAttribute("class", "task");
 
   const taskItemTextNode = document.createTextNode(task);
@@ -165,17 +164,42 @@ addTaskUl.addEventListener("click", (e) => {
     // console.log(todos)
     localStorage.setItem("TODOS", JSON.stringify(todos));
   } else if (e.target.classList.contains("edit-icon-task")) {
-
     e.target.classList.remove("bi", "bi-pencil-square");
-    e.target.classList.add("bi","bi-pencil");
-  
-    id = e.target.parentElement.parentElement.parentElement.getAttribute("id")
+    e.target.classList.add("bi", "bi-pencil");
 
-    todos = todos.filter((todo) => todo.id !== Number(id));
+    e.target.nextSibling.setAttribute("contenteditable", "true");
+    console.log(e.target.nextSibling.innerText);
+    // console.log(e.target.parentElement.parentElement.parentElement.getAttribute("id"))
+    let id =
+      e.target.parentElement.parentElement.parentElement.getAttribute("id");
+    todosEdit = todos.filter((todo) => todo.id == Number(id));
 
-    todos[0].text = task.value;
-    todos = todos.filter((todo) => todo);
-   
+    e.target.nextSibling.addEventListener("input", () => {
+      todosEdit[0].task = e.target.nextSibling.innerText;
+    });
+    if (e.target.classList.contains("bi-pencil")) {
+      todos = todos.filter((todo) => todo);
+      localStorage.setItem("TODOS", JSON.stringify(todos));
+    }
+    // console.log(todos)
+  } else if (e.target.classList.contains("edit-icon-description")) {
+    e.target.classList.remove("bi", "bi-pencil-square");
+    e.target.classList.add("bi", "bi-pencil");
+    e.target.nextSibling.setAttribute("contenteditable", "true");
+    console.log(e.target.nextSibling.innerText);
+
+    let id =
+      e.target.parentElement.parentElement.parentElement.getAttribute("id");
+    todosEdit = todos.filter((todo) => todo.id == Number(id));
+
+    e.target.nextSibling.addEventListener("input", () => {
+      todosEdit[0].description = e.target.nextSibling.innerText;
+    });
+    if (e.target.classList.contains("bi-pencil")) {
+      todos = todos.filter((todo) => todo);
+      localStorage.setItem("TODOS", JSON.stringify(todos));
+    }
+    // console.log(todos)
   }
 });
 

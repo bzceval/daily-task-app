@@ -21,7 +21,6 @@ body {
 }
 .daily-task {
   width: 50%;
-  /* max-width: 80%; */
   background-color: rgba(0, 0, 0, 75%);
   height: 100%;
   display: flex;
@@ -222,25 +221,43 @@ li.checked .edit-icon-description {
   transition: left 0.8s;
   border-radius: 2px;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 650px) {
   .create-todo h1 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
-  .errorBox {
-    font-size: 0.6rem;
+  .daily-task input { 
+    margin: 15px 0;
+    padding: 5px 0;
+    font-size: .7rem;
   }
-  .add-task-btn {
-    font-size: 0.6rem;
-    padding: 8px; 
+  .daily-task input::placeholder {
+    font-family: "Baloo 2", cursive;
+    font-size: .7rem;
+    padding-left: .3rem;
+  }
+  .daily-task input:focus {
+    box-shadow: rgba(99, 99, 99, 0.4) 1px 3px 8px 2px;
+    transition: all 0.5s;
+    padding-left: .3rem;
+  }
+  .add-task-btn { 
+    color: rgba(255, 255, 255, 0.7);
+    padding: 5px; 
     margin-top: 10px;
+    border-radius: 3px;
+    margin-bottom: 3rem;
+    font-size: .7rem;
   }
-  .daily-task input {
-    font-size: 0.5rem;
+  .errorBox { 
+    text-align: center;
+    font-family: "Baloo 2", cursive;
+    font-size: .5rem;
+    overflow: hidden;
   }
-  .daily-task {
-    padding: 8px 0px 8px 0px;
-  }
-  .review-section {
-    padding: 8px 0px 8px 0px;
+  
+  .errorBox .errorMessage {
+    position: relative;
+    background-color: rgba(84, 43, 8, 0.4);
+    padding: 5px; 
   }
 }
