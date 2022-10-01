@@ -39,6 +39,7 @@ body {
   box-shadow: rgba(99, 99, 99, 0.4) 1px 1px 2px 0px;
   outline: none;
   width: 80%;
+  max-width: 100%;
   margin: 20px 0;
   padding: 10px 0;
   font-size: 1rem;
@@ -60,6 +61,7 @@ body {
   color: rgba(255, 255, 255, 0.7);
   padding: 10px;
   width: 80%;
+  max-width: 80%;
   margin-top: 20px;
   border-radius: 5px;
   margin-bottom: 3rem;
@@ -87,13 +89,10 @@ body {
 .review-section li {
   list-style-type: none;
 }
-
 /* TASK */
 .add-task-ul .taskItem {
-  width: 90%;
-  /* height: 100px; */
-  display: flex;
-  /* gap: 3rem; */
+  width: 90%; 
+  display: flex; 
   margin-top: 30px;
   margin-bottom: 30px;
   border-bottom: 5px solid rgba(84, 43, 8, 0.5);
@@ -221,4 +220,18 @@ li.checked .edit-icon-description {
   left: -1000px;
   transition: left 0.8s;
   border-radius: 2px;
+}
+@media screen and (max-width: 750px) {
+  .create-todo h1 {
+    font-size: 1.3rem;
+  } 
+  .errorBox {  
+    font-size: .7rem; 
+  }
+  .add-task-btn {    
+    font-size: .7rem;
+  }
+  .daily-task input {
+    font-size: .7rem;
+  }
 }
