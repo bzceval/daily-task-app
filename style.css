@@ -204,3 +204,21 @@ li.checked .edit-icon-description {
   transform: translate(3px, 0px);
   transition: all 0.5s;
 }
+/*error message*/
+.errorBox {
+  color: #fff;
+  width: 80%;
+  max-width: 80%;
+  text-align: center;
+  font-family: "Baloo 2", cursive;
+  font-size: 1rem;
+  overflow: hidden;
+}
+.errorBox .errorMessage {
+  position: relative;
+  background-color: rgba(84, 43, 8, 0.3);
+  padding: 8px;
+  left: -1000px;
+  transition: left 0.8s;
+  border-radius: 2px;
+}
