@@ -80,7 +80,7 @@ body {
 }
 .review-section {
   color: #542c08;
-  padding: 50px 0px 50px 30px;
+  padding: 50px 0px 50px 50px;
 }
 .review-section h2 {
   font-size: 40px;
@@ -274,5 +274,9 @@ li.checked .edit-icon-description {
   }
   .bi-trash3 { 
     padding-right: .8rem;
+  }
+  .review-section {
+    color: #542c08;
+    padding: 50px 0px 50px 10px;
   }
 }
