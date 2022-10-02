@@ -1,22 +1,23 @@
-//Selectors
+// Selectors
 const itemInputEl = document.querySelector("#todo-item-input");
 const descriptionInputEl = document.querySelector("#todo-description-input");
 const addTaskUl = document.querySelector(".add-task-ul");
 
-//Date Selectors
+// Date Selectors
 const dateEl = document.querySelector(".date");
 
-//Time Selectors
+// Time Selectors
 const clockEl = document.querySelector(".clock");
 const minutesEl = document.querySelector(".minutes");
 const ampmEl = document.querySelector(".am-pm");
 
-//Button Selectors
+// Button Selectors
 const addTaskBtnEl = document.querySelector(".add-task-btn");
 
-//Error Selectors
+// Error Selectors
 const errorMessage = document.querySelector(".errorMessage");
 
+// Error Box
 function error(msg) {
   errorMessage.innerHTML = `${msg}`;
   errorMessage.style.left = "0";
@@ -25,7 +26,7 @@ function error(msg) {
   }, 3000);
 }
 
-//Modal Selectors
+// Modal Selectors
 const modalEl = document.querySelector(".modal-container");
 const modalBtn = document.querySelector("#modal-ok");
 
@@ -140,7 +141,7 @@ function createItemElement(newTask) {
   addTaskUl.appendChild(taskLi);
 }
 
-//event capturing
+// event capturing
 addTaskUl.addEventListener("click", (e) => {
   // console.log(e.target);
 
@@ -154,7 +155,6 @@ addTaskUl.addEventListener("click", (e) => {
 
     localStorage.setItem("TODOS", JSON.stringify(todos));
   } else if (e.target.classList.contains("bi-check-circle")) {
-    console.log("evet");
     e.target.parentElement.parentElement.classList.toggle("checked");
     todos.map((todo, index) => {
       if (todo.id == id) {
@@ -203,7 +203,7 @@ addTaskUl.addEventListener("click", (e) => {
   }
 });
 
-//keyboard enter click event
+// keyboard enter click event
 addTaskUl.addEventListener("keydown", (e) => {
   if (e.code === "Enter") {
     addTaskBtnEl.click();
@@ -230,7 +230,7 @@ clockEl.textContent =
     : `0${(clockEl.textContent = new Date().getHours())}`;
 
 const minutesCounterEl = new Date().getMinutes();
-if (minutesCounterEl > 00 || minutesCounterEl > 12) {
+if (minutesCounterEl > 00 || minutesCounterEl > 13) {
   minutesEl.innerHTML = ` : ${minutesCounterEl} AM`;
 } else {
   minutesEl.innerHTML = ` : ${minutesCounterEl} PM`;
