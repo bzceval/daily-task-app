@@ -158,7 +158,6 @@ li.checked .bi {
 li.checked .edit-icon-description {
   color: rgba(84, 43, 8, 0.6);
 }
-
 /*modal*/
 .modal-container {
   background-color: rgba(0, 0, 0, 0.5);
@@ -212,7 +211,6 @@ li.checked .edit-icon-description {
   font-size: 1rem;
   overflow: hidden;
 }
-
 .errorBox .errorMessage {
   position: relative;
   background-color: rgba(84, 43, 8, 0.3);
@@ -275,6 +273,6 @@ li.checked .edit-icon-description {
     font-size: 1rem;
   }
   .bi-trash3 { 
-    padding-right: 0.5rem;
+    padding-right: .8rem;
   }
 }
