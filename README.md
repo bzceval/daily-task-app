@@ -9,7 +9,7 @@ I used **HTML** in my index page and applied the **JavaScript** language to give
 
 ## Demo
 </br>
-- ![Animation](https://user-images.githubusercontent.com/100320309/194820640-fd4b09d7-3575-441c-ac5a-67247576350a.gif)
+![Animation](https://user-images.githubusercontent.com/100320309/194820640-fd4b09d7-3575-441c-ac5a-67247576350a.gif)
 
 ## Step by Step Javascript Coding
 - [x] Get document elements with JS </br> 
