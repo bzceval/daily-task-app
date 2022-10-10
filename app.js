@@ -106,7 +106,7 @@ function createItemElement(newTask) {
   //task div p
   const taskItemText = document.createElement("p");
   taskItemText.setAttribute("class", "task");
-
+ 
   const taskItemTextNode = document.createTextNode(task);
   taskItemText.appendChild(taskItemTextNode);
   taskLiDiv.appendChild(taskItemText);
@@ -173,9 +173,8 @@ addTaskUl.addEventListener("click", (e) => {
     let id =
       e.target.parentElement.parentElement.parentElement.getAttribute("id");
     todosEdit = todos.filter((todo) => todo.id == Number(id));
-
+  
     e.target.nextSibling.addEventListener("input", () => { 
-      e.target.nextSibling.innerText.focus()
       todosEdit[0].task = e.target.nextSibling.innerText;
     });
     if (e.target.classList.contains("bi-pencil")) {
@@ -220,7 +219,6 @@ modalBtn.addEventListener("click", () => {
   modalEl.style.display = "none";
   itemInputEl.focus();
 });
-
 
 // Date and Time
 const date = new Date().toDateString();
