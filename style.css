@@ -92,8 +92,8 @@ body {
 .add-task-ul .taskItem {
   width: 90%;
   display: flex;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border-bottom: 5px solid rgba(84, 43, 8, 0.5);
 }
 /* RIGHT DIV */
@@ -282,13 +282,13 @@ li.checked .edit-icon-description {
   }
   .bi { 
     font-size: 1rem; 
-    padding: .5rem;
+    padding: .6rem;
   }
   p.task {
-    padding: .5rem;
+    padding: .6rem;
   }
   p.description {
-    padding: .5rem;
+    padding: .6rem;
   }
   .bi-trash3 { 
     padding-right: .8rem;
