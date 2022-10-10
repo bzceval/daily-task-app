@@ -168,13 +168,14 @@ addTaskUl.addEventListener("click", (e) => {
     e.target.classList.add("bi", "bi-pencil");
 
     e.target.nextSibling.setAttribute("contenteditable", "true");
-    console.log(e.target.nextSibling.innerText);
+    // console.log(e.target.nextSibling.innerText);
     // console.log(e.target.parentElement.parentElement.parentElement.getAttribute("id"))
     let id =
       e.target.parentElement.parentElement.parentElement.getAttribute("id");
     todosEdit = todos.filter((todo) => todo.id == Number(id));
 
-    e.target.nextSibling.addEventListener("input", () => {
+    e.target.nextSibling.addEventListener("input", () => { 
+      e.target.nextSibling.innerText.focus()
       todosEdit[0].task = e.target.nextSibling.innerText;
     });
     if (e.target.classList.contains("bi-pencil")) {
@@ -211,14 +212,15 @@ addTaskUl.addEventListener("keydown", (e) => {
 });
 
 window.onload = function () {
-  itemInputEl.focus();
-  modalEl.classList.add("show");
-};
+  modalEl.classList.add("show"); 
+}; 
 
 modalBtn.addEventListener("click", () => {
   // console.log("modalı kapat")
   modalEl.style.display = "none";
+  itemInputEl.focus();
 });
+
 
 // Date and Time
 const date = new Date().toDateString();

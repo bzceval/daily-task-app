@@ -129,6 +129,16 @@ body {
   font-size: 600;
   font-size: 1.2rem;
 }
+p.task:focus { 
+  width: 100%;   
+  color: #1d4f4c;
+  font-weight: 900;
+}
+p.description:focus { 
+  width: 100%;  
+  color: #1d4f4c;
+  font-weight: 600;
+}
 
 /*icon sizes*/
 .bi {
