@@ -231,7 +231,7 @@ li.checked .edit-icon-description {
   border-radius: 2px;
 }
 @media screen and (max-width: 650px) {
-  .create-todo h1 {
+ .create-todo h1 {
     font-size: 1.1rem;
   }
   .daily-task input { 
@@ -281,7 +281,14 @@ li.checked .edit-icon-description {
     font-size: .9rem;
   }
   .bi { 
-    font-size: 1rem;
+    font-size: 1rem; 
+    padding: .5rem;
+  }
+  p.task {
+    padding: .5rem;
+  }
+  p.description {
+    padding: .5rem;
   }
   .bi-trash3 { 
     padding-right: .8rem;
@@ -289,5 +296,5 @@ li.checked .edit-icon-description {
   .review-section {
     color: #542c08;
     padding: 50px 0px 50px 10px;
-  }
+  } 
 }
