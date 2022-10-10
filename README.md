@@ -8,9 +8,8 @@ I used **HTML** in my index page and applied the **JavaScript** language to give
 - [Figma Design](https://www.figma.com/file/Po79NBfsNv6HeDX5ov9KON/Todo-App-%7C-JS?node-id=0%3A1)
 
 ## Demo
-- [Netlify](https://daily-task-app-0.netlify.app/)
+- [Netlify](https://daily-task-app-0.netlify.app/)</br> 
 
-## Demo
 ![Animation](https://user-images.githubusercontent.com/100320309/194820640-fd4b09d7-3575-441c-ac5a-67247576350a.gif)
 
 ## Step by Step Javascript Coding
